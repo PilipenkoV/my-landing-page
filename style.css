@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ! сброс стилей */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* === переменные === */
+:root {
+	--colorborder: rgba(0, 0, 0, 0.5);
+	--colornavtext: rgba(0, 0, 0, 0.6);
+	--colortext: rgba(0, 0, 0, 0.7);
+	--colortexthover: rgb(0, 0, 0);
+	--backgroudcolorsection: #f6f6f6;
+}
+
+
+/* ! общие стили */
+html {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 10px;
+	padding: 0 10px;
+}
+
+.body {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/* ! = стили секции хедер = */
+
+.header {
+	margin: 0px 5px 30px 5px;
+}
+
+/* == стили блока навигации == */
+
+.navigation {
+	height: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--colorborder);
+
+}
+
+.navigation a {
+	text-decoration: none;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	color: var(--colornavtext);
+	text-shadow: 1px 1px 2px var(--colorborder);
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s linear;
+}
+
+.navigation a:hover {
+	border-bottom: 1px solid var(--colornavtext);
+	color: var(--colortexthover);
+
+}
+
+/* == стили блока заглавия == */
+
+.title {
+	height: 180px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.title h1 {
+	color: var(--colortext);
+	text-shadow: 1px 1px 2px var(--colorborder);
+	font-size: 3rem;
+	line-height: 4rem;
+}
+
+.title__box1,
+.title__box2 {
+	display: flex;
+	align-items: flex-end;
+	padding: 5px;
+
+}
+
+.title p {
+	color: var(--colortext);
+	text-shadow: 1px 1px 2px var(--colorborder);
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+}
+
+/* == стили блока выбора языка == */
+
+.language {
+	font-size: 1.6rem;
+	line-height: 4rem;
+	transform: rotate(-90deg);
+	margin-right: -25px;
+	margin-bottom: 10px;
+
+}
+
+.language a {
+	text-decoration: none;
+	color: var(--colornavtext);
+}
+
+.language a:first-child {
+	margin-right: 10px;
+}
+
+.language a:hover {
+	color: var(--colortexthover);
+}
+
+/* == стили блока фото == */
+
+.myfoto {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	box-shadow: 2px 2px 5px var(--colorborder), -2px -2px 5px var(--colorborder);
+}
+
+.myfoto img {
+	width: 100%;
+	filter: grayscale(1);
+	transition: all 0.5s linear;
+}
+
+.myfoto img:hover {
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+/* ! стили секции about me */
+
+.aboutme {
+	height: 400px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--backgroudcolorsection);
+	margin: 0 0 30px 0;
+}
+
+.aboutme__wrapper {
+	/* border: 1px solid rgb(40, 139, 0); */
+	text-align: center;
+}
+
+.aboutme h2,
+.hardskills__wrapper h2,
+.portfolio h2,
+.footer h2 {
+	font-size: 2.5rem;
+	line-height: 3rem;
+	margin: 1em 0 1em 0;
+	color: var(--colortext);
+	text-shadow: 1px 1px 2px var(--colorborder);
+	text-align: center;
+}
+
+.aboutme p,
+.hardskills__wrapper p {
+	font-size: 1.6rem;
+	line-height: 2rem;
+	margin-bottom: 10px;
+	color: var(--colortext);
+	text-align: center;
+}
+
+/* ! стили секции hard skills */
+
+.hardskills {
+	min-height: 500px;
+	margin-top: 100px;
+}
+
+.hardskills__box {
+	display: flex;
+	justify-content: center;
+}
+
+.hardskills__item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px 10% 30px 10%;
+}
+
+.figure {
+	display: block;
+	margin: 10px;
+	filter: grayscale(1);
+	transition: all 0.3s linear;
+}
+
+.figure img {
+	width: 70px;
+	height: auto;
+}
+
+/* .figure img:hover {
+	filter: grayscale(0);
+	transform: scale(1.15);
+} */
+
+.figure:hover {
+	filter: grayscale(0);
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+
+.hardskills__item figcaption {
+	font-size: 1.3rem;
+	color: var(--colortext);
+	text-align: center;
+}
+
+/* стили блока "рейтинг" (уровень владения технологией) */
+.stars {
+	display: flex;
+	justify-content: center;
+	font-size: 1.3rem;
+	color: rgb(255, 217, 0);
+}
+
+/* ! стили секции portfolio */
+
+.portfolio {
+	margin-top: 50px;
+	background-color: var(--backgroudcolorsection);
+	padding: 50px 0;
+}
+
+.portfolio__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.portfolio__wrapper a {
+	text-decoration: none;
+	color: var(--colortext);
+	font-size: 1.3rem;
+	line-height: 1.7rem;
+	padding: 3px;
+	border-bottom: 1px solid transparent;
+	transition: all 0.5s linear;
+}
+
+.portfolio__wrapper a:hover {
+	color: var(--colortexthover);
+	border-bottom: 1px solid var(--colortexthover);
+}
+
+.portfolio figure {
+	padding: 20px 20px 10px 20px;
+	background-color: white;
+	box-shadow: 1px 1px 3px var(--colorborder);
+	width: 70%;
+	height: auto;
+	margin-bottom: 20px;
+	filter: grayscale(1);
+	transition: all 0.5s linear;
+}
+
+.portfolio img {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.portfolio figure:hover {
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+/* стили кнопки */
+
+.btn__wrapper {
+	display: flex;
+}
+
+.btn__wrapper button {
+	margin: 10px auto;
+	padding: 10px;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-shadow: 1px 1px 2px var(--colorborder);
+}
+
+
+/* ! стили секции footer */
+
+.boxcontact {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 60%;
+	margin: 20px auto;
+}
+
+.boxcontact a {
+	font-size: 3.5rem;
+	color: var(--colortext);
+	padding: 3px;
+	margin: 5px 15px;
+	transition: all 0.3s linear;
+}
+
+.boxcontact a:hover {
+	color: blue;
+	transform: scale(1.1) rotate(10deg);
+}
+
+.copyright-wrapper {
+	background-color: var(--backgroudcolorsection);
+	display: flex;
+	justify-content: center;
+	padding: 15px 10px;
+}
+
+.copyright {
+	font-size: 1.2rem;
+}
+
+.copyright i {
+	margin-right: 5px;
+}
