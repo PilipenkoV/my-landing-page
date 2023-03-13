@@ -15,6 +15,7 @@
 	--colortexthover: rgb(0, 0, 0);
 	--backgroudcolorsection: #f6f6f6;
 	--buttonhover: rgba(51, 51, 153, 0.8);
+	--colorbuttonscrollup: rgba(160, 160, 160, 0.5);
 }
 
 
@@ -342,36 +343,54 @@ html {
 
 /* ! footer END */
 
-/* ! ===== стили кнопки scroll top ===== */
+/* ! ===== стили кнопки scroll up ===== */
 
-.wrap-scroll {
-	max-width: 960px;
-	margin: 0 auto;
-	transition: 0.5s all ease;
-}
-
-#scrollTop {
+.scroll-up {
 	position: fixed;
+	right: 50px;
 	bottom: 50px;
-	right: 20px;
-	z-index: 9999;
+	z-index: 1000;
+	width: 50px;
+	height: 50px;
+	color: var(--colorbuttonscrollup);
+	cursor: pointer;
+	visibility: hidden;
+	border-radius: 50px;
+	box-shadow: inset 0 0 0 4px var(--colorbuttonscrollup);
+	opacity: 0;
+	transition: 0.2s;
+	transform: translateY(25px);
 }
 
-.fa-circle-arrow-up {
-	font-size: 4rem;
-	color: var(--colornavtext);
+.scroll-up::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	content: '↑';
 }
 
-button {
-	border: none;
-	background: none;
-	border-radius: 50%;
-	box-shadow: 0 0 5px var(--colortext);
+.scroll-up:hover {
+	color: orange;
 }
 
-button:hover {
-	box-shadow: 0 0 15px var(--buttonhover);
+.scroll-up--active {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
 }
 
+.scroll-up__svg-path {
+	box-sizing: border-box;
+	fill: none;
+	stroke: orange;
+	stroke-width: 4px;
+	transition: 0.2s;
+}
 
-/* ! стили кнопки scroll top END */
+/* ! стили кнопки scroll up END */
