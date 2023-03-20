@@ -145,9 +145,9 @@ html {
 /* ! ====== стили секции about me ====== */
 
 .aboutme {
-	height: 400px;
 	padding: 5px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--backgroudcolorsection);
@@ -178,6 +178,96 @@ html {
 	color: var(--colortext);
 	text-align: center;
 }
+
+/* === стили блока образование (accordion) === */
+
+.aboutme__wrapper-accordion {
+	width: 100%;
+	margin-top: 50px;
+	padding: 5px;
+}
+
+.accordion {
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	font-size: 1.4rem;
+	line-height: 2rem;
+	color: var(--colortext);
+}
+
+.accordion-item {
+	margin-bottom: 20px;
+}
+
+.accordion-item--active .accordion-item__trigger {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.accordion-item--active .accordion-item__content {
+	display: block;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.accordion-item__trigger {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	color: var(--colortext);
+	text-shadow: 1px 1px 3px var(--colorborder);
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 5px;
+	border-bottom: 1px solid var(--colorborder);
+	cursor: pointer;
+}
+
+.accordion-item__content {
+	padding: 5px;
+	display: none;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.accordion-item__content-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: start;
+}
+
+.accordion-item__content p {
+	font-size: 1.2rem;
+}
+
+.accordion-item__content figure {
+	margin: 10px;
+}
+
+.accordion-item__content img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	object-position: 50% 50%;
+	padding: 4px;
+	display: block;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.accordion-item__content figcaption {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* === END блока образование === */
+/* ! END стили секции about me */
 
 /* ! ===== стили секции hard skills ===== */
 
@@ -372,7 +462,8 @@ html {
 	width: 100%;
 	height: 100%;
 	font-size: 20px;
-	content: '↑';
+	/* content: '↑'; */
+	content: '▲';
 }
 
 .scroll-up:hover {
