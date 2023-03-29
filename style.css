@@ -221,9 +221,11 @@ html {
 	text-shadow: 1px 1px 3px var(--colorborder);
 	text-transform: uppercase;
 	font-weight: 700;
-	padding: 5px;
+	padding: 5px 5px 5px 35px;
 	border-bottom: 1px solid var(--colorborder);
 	cursor: pointer;
+
+	position: relative;
 }
 
 .accordion-item__content {
@@ -266,7 +268,49 @@ html {
 	margin-top: 10px;
 }
 
-/* === END блока образование === */
+/*  END блока образование */
+
+/* === стили для стрелок в заглавии аккордеона === */
+
+.accordion-item .accordion-item__trigger::before,
+.accordion-item .accordion-item__trigger::after {
+	content: "";
+	width: 10px;
+	height: 1px;
+	background-color: gray;
+	position: absolute;
+	top: 13px;
+	transition: all 0.3s ease 0s;
+}
+
+.accordion-item__trigger::before {
+	transform: rotate(40deg);
+	left: 5px;
+}
+
+.accordion-item__trigger::after {
+	transform: rotate(-40deg);
+	left: 12px;
+}
+
+.accordion-item--active .accordion-item__trigger::before,
+.accordion-item--active .accordion-item__trigger::after {
+	background-color: red;
+}
+
+.accordion-item--active .accordion-item__trigger::before {
+	transform: rotate(-40deg);
+}
+
+.accordion-item--active .accordion-item__trigger::after {
+	transform: rotate(40deg);
+}
+
+/* END стили для стрелок в заглавии аккордеона */
+
+/* ===== стили для модального окна - фото документов ===== */
+
+/* END стили для модального окна - фото документов */
 /* ! END стили секции about me */
 
 /* ! ===== стили секции hard skills ===== */
