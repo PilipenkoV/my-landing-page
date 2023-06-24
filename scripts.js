@@ -1,4 +1,13 @@
-// ! ===== scrollTop =====
+// ! ========== burger menu ==========
+
+document.addEventListener("DOMContentLoaded", function () {
+	document.getElementById("burger").addEventListener("click", function () {
+		document.querySelector(".navigation").classList.toggle("active")
+	})
+})
+
+
+// ! ========== scrollTop ==========
 
 function scrollToHandler() {
 	window.scrollTo({
@@ -8,7 +17,7 @@ function scrollToHandler() {
 }
 
 
-// ! ===== scroll to section =====
+// ! ========== scroll to section ==========
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -23,7 +32,7 @@ for (let anchor of anchors) {
 	})
 }
 
-// ! ===== button scroll up =====
+// ! ========== button scroll up ==========
 
 const offset = 100;
 const scrollUp = document.querySelector('.scroll-up');
@@ -62,7 +71,7 @@ scrollUp.addEventListener('click', () => {
 	});
 })
 
-// ! ===== accordion in 'about me' section =====
+// ! ========== accordion in 'about me' section ==========
 
 document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
 	item.addEventListener('click', () => {
@@ -80,7 +89,7 @@ document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
 	})
 )
 
-// ! ===== copyright date update =====
+// ! ========== copyright date update ==========
 
 const year = document.querySelector('#current-year');
 year.innerHTML = new Date().getFullYear();

@@ -16,6 +16,8 @@
 	--backgroudcolorsection: #f6f6f6;
 	--buttonhover: rgba(51, 51, 153, 0.8);
 	--colorbuttonscrollup: rgba(160, 160, 160, 0.5);
+	--backgroundburgermenu: rgba(0, 0, 0, 0.7);
+	--backgroundburgermenuhover: rgba(201, 201, 201, 0.8);
 }
 
 
@@ -38,35 +40,97 @@ html {
 	margin: 0px 5px 30px 5px;
 }
 
-/* ===== стили блока навигации ===== */
+/* ===== загальні стилі для всього блоку navigation ===== */
 
 .navigation {
-	height: 60px;
+	min-height: 60px;
 	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
 	border-bottom: 2px solid var(--colorborder);
 
 }
 
-.navigation a {
+/* ===== стилі блоку navigation__burger ===== */
+
+.navigation__burger {
+	/* background-color: cadetblue; */
+
+	display: none;
+	position: relative;
+}
+
+.navigation__burger span {
+	position: absolute;
+	content: "";
+	top: 18px;
+	left: 7px;
+	width: 25px;
+	height: 2px;
+	background-color: var(--colortext);
+	box-shadow: 1px 1px 2px var(--colorborder);
+	transition: all 0.2s linear;
+}
+
+.navigation__burger span:nth-child(1) {
+	top: 10px;
+}
+
+/* .navigation__burger span:nth-child(2) {} */
+
+.navigation__burger span:nth-child(3) {
+	top: 26px;
+}
+
+.navigation.active .navigation__burger span:nth-child(1) {
+	transform: translateY(8px) rotate(-45deg);
+}
+
+.navigation.active .navigation__burger span:nth-child(2) {
+	opacity: 0;
+}
+
+.navigation.active .navigation__burger span:nth-child(3) {
+	transform: translateY(-8px) rotate(45deg);
+}
+
+/* ===== стилі блоку navigation__logo ===== */
+
+.navigation__logo {
+	display: none;
+}
+
+/* ===== стилі блоку navigation__link ===== */
+
+.navigation__link {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navigation__link a {
+	display: inline-block;
 	text-decoration: none;
-	font-size: 1.4rem;
-	line-height: 1.8rem;
+	font-size: 1.6rem;
+	line-height: 2rem;
 	color: var(--colornavtext);
 	text-shadow: 1px 1px 2px var(--colorborder);
 	border-bottom: 1px solid transparent;
 	transition: all 0.3s linear;
+	padding: 5px 10px;
 }
 
-.navigation a:hover {
+.navigation__link:hover a {
+	filter: blur(1px);
+}
+
+.navigation__link a:hover {
 	border-bottom: 1px solid var(--colornavtext);
 	color: var(--colortexthover);
-
+	filter: blur(0);
 }
 
-/* ===== стили блока заглавия ===== */
+/* ===== стилі блоку title ===== */
 
 .title {
 	height: 180px;
@@ -529,3 +593,83 @@ html {
 }
 
 /* ! стили кнопки scroll up END */
+
+/* ! ==================== стилі для планшету та смартфону ==================== */
+
+@media screen and (max-width: 768px) {
+
+	.navigation {
+		justify-content: space-between;
+		position: relative;
+	}
+
+	/* ===== стилі блоку navigation__burger ===== */
+
+	.navigation__burger {
+		/* border: 1px solid red; */
+
+		display: block;
+		width: 40px;
+		height: 40px;
+		z-index: 2;
+		margin-left: 15px;
+		cursor: pointer;
+		transition: transform 0.3s linear;
+	}
+
+	.navigation.active .navigation__burger {
+		transform: rotate(-180deg);
+	}
+
+	.navigation.active .navigation__burger span {
+		background-color: #fff;
+	}
+
+	/* ===== стилі блоку navigation__logo ===== */
+
+	.navigation__logo {
+		display: inline-block;
+		font-family: inherit;
+		text-shadow: 1px 1px 2px var(--colorborder);
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+
+	.navigation__logo span {
+		font-weight: 400;
+		font-style: italic;
+		text-transform: uppercase;
+	}
+
+	/* ===== стилі блоку navigation__link ===== */
+
+	.navigation__link {
+		/* border: 1px solid red; */
+		background-color: var(--backgroundburgermenu);
+
+		position: absolute;
+		top: 0;
+		left: -220px;
+		width: 200px;
+		padding: 70px 5px 10px 15px;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.4s linear;
+	}
+
+	.navigation__link a {
+		color: white;
+		transition: transform 0.2s linear, background-color 0.3s linear;
+	}
+
+	.navigation.active .navigation__link a:hover {
+		background-color: var(--backgroundburgermenuhover);
+		transform: translateX(5px);
+	}
+
+	.navigation.active .navigation__link {
+		transform: translateX(220px);
+
+	}
+
+}
