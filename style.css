@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap'); */
 
-/* ! ===== сброс стилей ===== */
+/* ! ==================== скидання стилів - reset styles ==================== */
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-/* ===== переменные ===== */
+/* ==================== змінні - variables ==================== */
 :root {
 	--colorborder: rgba(0, 0, 0, 0.5);
 	--colornavtext: rgba(0, 0, 0, 0.6);
@@ -21,7 +21,7 @@
 }
 
 
-/* ! ===== общие стили ===== */
+/* ! ==================== загальні стилі - general styles ==================== */
 html {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 10px;
@@ -34,13 +34,29 @@ html {
 	margin: 0 auto;
 }
 
-/* ! ===== стили секции хедер ===== */
+.aboutme h2,
+.hardskills__wrapper h2,
+.portfolio h2,
+.footer h2 {
+	font-size: 2.5rem;
+	line-height: 3rem;
+	margin: 0 0 1em 0;
+	color: var(--colortext);
+	text-shadow: 1px 1px 2px var(--colorborder);
+	text-align: center;
+}
+
+.padding-section {
+	padding: 30px 0 5px 0;
+}
+
+/* ! ==================== секція - header ==================== */
 
 .header {
 	margin: 0px 5px 30px 5px;
 }
 
-/* ===== загальні стилі для всього блоку navigation ===== */
+/* ========== загальні стилі для всього блоку - navigation ========== */
 
 .navigation {
 	min-height: 60px;
@@ -48,14 +64,11 @@ html {
 	flex-wrap: nowrap;
 	align-items: center;
 	border-bottom: 2px solid var(--colorborder);
-
 }
 
-/* ===== стилі блоку navigation__burger ===== */
+/* === navigation__burger === */
 
 .navigation__burger {
-	/* background-color: cadetblue; */
-
 	display: none;
 	position: relative;
 }
@@ -94,13 +107,13 @@ html {
 	transform: translateY(-8px) rotate(45deg);
 }
 
-/* ===== стилі блоку navigation__logo ===== */
+/* === navigation__logo === */
 
 .navigation__logo {
 	display: none;
 }
 
-/* ===== стилі блоку navigation__link ===== */
+/* === navigation__link === */
 
 .navigation__link {
 	display: flex;
@@ -130,7 +143,7 @@ html {
 	filter: blur(0);
 }
 
-/* ===== стилі блоку title ===== */
+/* ========== title ========== */
 
 .title {
 	height: 180px;
@@ -155,6 +168,8 @@ html {
 
 }
 
+/* === my profession - title__box1 === */
+
 .title p {
 	color: var(--colortext);
 	text-shadow: 1px 1px 2px var(--colorborder);
@@ -162,7 +177,7 @@ html {
 	line-height: 2.2rem;
 }
 
-/* ===== стили блока выбора языка ===== */
+/* === language selection - title__box2 === */
 
 .language {
 	font-size: 1.6rem;
@@ -170,7 +185,6 @@ html {
 	transform: rotate(-90deg);
 	margin-right: -25px;
 	margin-bottom: 10px;
-
 }
 
 .language a {
@@ -186,7 +200,7 @@ html {
 	color: var(--colortexthover);
 }
 
-/* ===== стили блока фото ===== */
+/* ========== myfoto ========== */
 
 .myfoto {
 	width: 100%;
@@ -206,33 +220,17 @@ html {
 	transform: scale(1.1);
 }
 
-/* ! ====== стили секции about me ====== */
+/* ! ==================== стили секции about me ==================== */
 
 .aboutme {
-	padding: 5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--backgroudcolorsection);
-	margin: 0 0 30px 0;
 }
 
-.aboutme__wrapper {
-	text-align: center;
-}
-
-.aboutme h2,
-.hardskills__wrapper h2,
-.portfolio h2,
-.footer h2 {
-	font-size: 2.5rem;
-	line-height: 3rem;
-	margin: 1em 0 1em 0;
-	color: var(--colortext);
-	text-shadow: 1px 1px 2px var(--colorborder);
-	text-align: center;
-}
+/* ========== aboutme__wrapper ========== */
 
 .aboutme p,
 .hardskills__wrapper p {
@@ -243,7 +241,7 @@ html {
 	text-align: center;
 }
 
-/* === стили блока образование (accordion) === */
+/* ========== aboutme__wrapper-accordion ========== */
 
 .aboutme__wrapper-accordion {
 	width: 100%;
@@ -332,9 +330,7 @@ html {
 	margin-top: 10px;
 }
 
-/*  END блока образование */
-
-/* === стили для стрелок в заглавии аккордеона === */
+/* === стилі для стрілок акордеону === */
 
 .accordion-item .accordion-item__trigger::before,
 .accordion-item .accordion-item__trigger::after {
@@ -370,19 +366,11 @@ html {
 	transform: rotate(40deg);
 }
 
-/* END стили для стрелок в заглавии аккордеона */
+/* === стилі для модального вікна - фото документів === */
 
-/* ===== стили для модального окна - фото документов ===== */
+/* ! ==================== hard skills ==================== */
 
-/* END стили для модального окна - фото документов */
-/* ! END стили секции about me */
-
-/* ! ===== стили секции hard skills ===== */
-
-.hardskills {
-	min-height: 500px;
-	margin-top: 100px;
-}
+/* .hardskills {} */
 
 .hardskills__box {
 	display: flex;
@@ -401,7 +389,7 @@ html {
 	display: block;
 	margin: 10px;
 	filter: grayscale(1);
-	transition: all 0.3s linear;
+	transition: all 0.2s linear;
 }
 
 .figure img {
@@ -409,14 +397,10 @@ html {
 	height: auto;
 }
 
-/* .figure img:hover {
-	filter: grayscale(0);
-	transform: scale(1.15);
-} */
 
 .figure:hover {
 	filter: grayscale(0);
-	transform: scale(1.2);
+	transform: scale(1.05);
 	cursor: pointer;
 }
 
@@ -427,7 +411,7 @@ html {
 	text-align: center;
 }
 
-/* стили блока "рейтинг" (уровень владения технологией) */
+/* ========== стилі блоку "рейтинг" (рівень володіння технологією) ========== */
 .stars {
 	display: flex;
 	justify-content: center;
@@ -435,12 +419,10 @@ html {
 	color: rgb(255, 217, 0);
 }
 
-/* ! ===== стили секции portfolio ===== */
+/* ! ==================== portfolio ==================== */
 
 .portfolio {
-	margin-top: 50px;
 	background-color: var(--backgroudcolorsection);
-	padding: 50px 0;
 }
 
 .portfolio__wrapper {
@@ -474,7 +456,7 @@ html {
 	height: auto;
 	margin-bottom: 20px;
 	filter: grayscale(1);
-	transition: all 0.5s linear;
+	transition: all 0.3s linear;
 }
 
 .portfolio img {
@@ -484,10 +466,10 @@ html {
 
 .portfolio figure:hover {
 	filter: grayscale(0);
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 
-/* стили кнопки */
+/* ========== стилі кнопки в секції портфоліо ========== */
 
 .btn__wrapper {
 	display: flex;
@@ -500,8 +482,7 @@ html {
 	text-shadow: 1px 1px 2px var(--colorborder);
 }
 
-
-/* ! ===== стили секции footer ===== */
+/* ! ==================== footer ==================== */
 
 .boxcontact {
 	display: flex;
@@ -594,7 +575,7 @@ html {
 
 /* ! стили кнопки scroll up END */
 
-/* ! ==================== стилі для планшету та смартфону ==================== */
+/* ! ==================== TABLET AND MOBILE ==================== */
 
 @media screen and (max-width: 768px) {
 
@@ -603,11 +584,9 @@ html {
 		position: relative;
 	}
 
-	/* ===== стилі блоку navigation__burger ===== */
+	/* ========== стилі блоку navigation__burger ========== */
 
 	.navigation__burger {
-		/* border: 1px solid red; */
-
 		display: block;
 		width: 40px;
 		height: 40px;
@@ -625,7 +604,7 @@ html {
 		background-color: #fff;
 	}
 
-	/* ===== стилі блоку navigation__logo ===== */
+	/* ========== navigation__logo ========== */
 
 	.navigation__logo {
 		display: inline-block;
@@ -641,12 +620,10 @@ html {
 		text-transform: uppercase;
 	}
 
-	/* ===== стилі блоку navigation__link ===== */
+	/* ========== navigation__link ========== */
 
 	.navigation__link {
-		/* border: 1px solid red; */
 		background-color: var(--backgroundburgermenu);
-
 		position: absolute;
 		top: 0;
 		left: -220px;
@@ -669,7 +646,6 @@ html {
 
 	.navigation.active .navigation__link {
 		transform: translateX(220px);
-
 	}
 
 }
