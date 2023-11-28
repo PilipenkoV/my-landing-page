@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-<!-- Google tag (gtag.js) -->
+	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBZLNEEL2V"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -11,7 +11,7 @@
 
 		gtag('config', 'G-PBZLNEEL2V');
 	</script>
-	
+
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/486f76c50d.js" crossorigin="anonymous"></script>
-	<title>Pilipenkoweb</title>
+	<title>Pilipenkoweb - розробка веб-сайтів з використанням сучасних технологій</title>
 </head>
 
 <body class="body">
@@ -63,10 +63,11 @@
 
 			<div class="title__box2">
 				<div class="language">
-					<a href="#">UA</a>
-					<a href="#">EN</a>
+					<a class="language-ua language-active" href="#">UA</a>
+					<a class="language-en" href="#">EN</a>
 				</div>
 			</div>
+
 		</div>
 
 		<div class="myfoto">
@@ -95,6 +96,7 @@
 			<div class="aboutme__wrapper-accordion">
 				<div class="accordion">
 
+					<!-- ! ==================== EDUCATION / ОСВІТА ==================== -->
 					<div class="accordion-item">
 						<div class="accordion-item__trigger">Освіта</div>
 						<div class="accordion-item__content">
@@ -110,6 +112,7 @@
 						</div>
 					</div>
 
+					<!-- ! ==================== ADDITIONAL EDUCATION / ДОДАТКОВА ОСВІТА ==================== -->
 					<div class="accordion-item">
 						<div class="accordion-item__trigger">Освіта додаткова</div>
 						<div class="accordion-item__content">
@@ -124,11 +127,17 @@
 									<figcaption>Campster.<br>
 										Курс: Вступ до програмування.</figcaption>
 								</figure>
+								<figure>
+									<img src="certificate/04_freeCodeCamp.png"
+										alt="Campster. Course: Introduction to programming.">
+									<figcaption>freeCodeCamp.<br>
+										Курс: Responsive Web Design.</figcaption>
+								</figure>
 							</div>
 						</div>
-
 					</div>
 
+					<!-- ! ==================== KNOWLEDGE OF FOREIGN LANGUAGES / ЗНАННЯ ІНОЗЕМНИХ МОВ ==================== -->
 					<div class="accordion-item">
 						<div class="accordion-item__trigger">Знання мов</div>
 						<div class="accordion-item__content">
@@ -186,7 +195,7 @@
 						<figure class="figure">
 							<img src="logo/wordpress-240.png" alt="Wordpress">
 							<figcaption>Wordpress</figcaption>
-							<div class="stars">★☆☆☆☆</div>
+							<div class="stars">★★★☆☆</div>
 						</figure>
 
 						<figure class="figure">
@@ -316,6 +325,13 @@
 			<div class="portfolio__wrapper">
 
 				<figure>
+					<img src="foto/AirPodsMAX.jpg" alt="Промо сайт Air Pods MAX">
+					<figcaption><a href="https://pilipenkov.github.io/AirPodsMAX/" target="_blank">Перейти на
+							сайт</a>
+					</figcaption>
+				</figure>
+
+				<figure>
 					<img src="foto/bitcoiner.jpg" alt="Криптовалютний обмінник">
 					<figcaption><a href="https://pilipenkov.github.io/Bitcoiner/" target="_blank">Перейти на
 							сайт</a>
@@ -371,7 +387,7 @@
 
 		<div class="copyright-wrapper">
 			<div class="copyright">
-				<p><i class="fa-solid fa-copyright"></i>pilipenkoweb <span id="current-year"></span></p>
+				<p><i class="fa-solid fa-copyright"></i>2022 - <span id="current-year"></span> pilipenkoweb</p>
 			</div>
 		</div>
 
@@ -389,7 +405,8 @@
 	</div>
 	<!-- ! scroll top  END -->
 
-	<script src="scripts.js"></script>
+	<!-- <script src="js/lang.js"></script> -->
+	<script src="js/scripts.js"></script>
 
 </body>
 
