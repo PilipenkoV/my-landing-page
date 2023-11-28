@@ -109,7 +109,19 @@ html {
 
 .navigation__logo {
 	display: none;
+
+	/* display: inline-block;
+	font-family: inherit;
+	text-shadow: 1px 1px 2px var(--colorborder);
+	font-size: 1.8rem;
+	font-weight: 700; */
 }
+
+/* .navigation__logo span {
+	font-weight: 400;
+	font-style: italic;
+	text-transform: uppercase;
+} */
 
 /* === navigation__link === */
 
@@ -188,6 +200,8 @@ html {
 .language a {
 	text-decoration: none;
 	color: var(--colornavtext);
+	padding: 3px;
+	border-radius: 3px;
 }
 
 .language a:first-child {
@@ -195,6 +209,11 @@ html {
 }
 
 .language a:hover {
+	color: var(--colortexthover);
+}
+
+.language .language-active {
+	background-color: var(--backgroundburgermenuhover);
 	color: var(--colortexthover);
 }
 
@@ -430,6 +449,7 @@ html {
 	text-align: center;
 	margin-bottom: 40px;
 }
+
 
 .portfolio__wrapper a {
 	text-decoration: none;
