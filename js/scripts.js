@@ -1,4 +1,3 @@
-
 // ! ==================== burger menu ===================
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -6,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelector(".navigation").classList.toggle("active")
 	})
 })
+
+
+// ! ==================== my-age update ====================
+
+const myAge = document.querySelector('#my-age');
+myAge.innerHTML = (new Date().getFullYear()) - 1979;
+
 
 // ! ==================== scrollTop ====================
 
